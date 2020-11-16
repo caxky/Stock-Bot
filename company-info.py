@@ -1,6 +1,6 @@
 import yfinance as yf
 
-def compileInformation(tickerSymbol):
+def compileCompanyInformation(tickerSymbol):
     tickerData = yf.Ticker(tickerSymbol)
 
     companyInformation = {
@@ -12,8 +12,6 @@ def compileInformation(tickerSymbol):
 
     return companyInformation
 
-tickerSymbol = 'MSFT'
-companyInformation = compileInformation(tickerSymbol)
-
-for x in companyInformation:
-    print(companyInformation[x])
+def printCompanyInformation(companyInformation):
+    for x in companyInformation:
+        print(companyInformation[x])
